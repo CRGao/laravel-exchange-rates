@@ -1,6 +1,6 @@
 {
-  "name": "ashallendesign/laravel-exchange-rates",
-  "description": "A wrapper package for interacting with the exchangeratesapi.io API.",
+  "name": "crgao/laravel-exchange-rates",
+  "description": "A wrapper package for interacting with the apilayer.com API.",
   "type": "library",
   "homepage": "https://github.com/ash-jc-allen/laravel-exchange-rates",
   "keywords": [

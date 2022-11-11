@@ -51,12 +51,14 @@ class RequestBuilder
      */
     public function makeRequest(string $path, array $queryParams = [])
     {
-        $url = $this->baseUrl.$path.'?access_key='.$this->apiKey;
+        $url = $this->baseUrl.$path;
 
         foreach ($queryParams as $param => $value) {
             $url .= '&'.urlencode($param).'='.urlencode($value);
         }
 
-        return json_decode($this->client->get($url)->getBody()->getContents(), true);
+        return json_decode($this->client->get($url, ['headers'=>[
+                'apikey' => $this->apiKey
+        ]])->getBody()->getContents(), true);
     }
 }
